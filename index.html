@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7c3aed">
+  <meta name="description" content="VVF domande 3 livello">
+  <title>VVF domande 3 livello</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+  <style>
+    :root{
+      --bg:#0f172a;
+      --card:#111827;
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+      --accent:#7c3aed;
+      --accent2:#22c55e;
+      --border:#243041;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:linear-gradient(180deg,#0f172a 0%,#111827 100%);
+      color:var(--text);
+      min-height:100vh;
+    }
+    .wrap{
+      max-width:900px;
+      margin:0 auto;
+      padding:24px;
+    }
+    .hero{
+      background:rgba(17,24,39,.92);
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:28px;
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+    .top{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:20px;
+      flex-wrap:wrap;
+    }
+    .logo{
+      width:64px;
+      height:64px;
+      border-radius:16px;
+      object-fit:cover;
+      border:1px solid var(--border);
+      background:#fff;
+    }
+    h1{
+      margin:0;
+      font-size:clamp(24px,4vw,40px);
+      line-height:1.1;
+    }
+    p{
+      margin:12px 0 0;
+      color:var(--muted);
+      line-height:1.6;
+      font-size:16px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:16px;
+      margin-top:24px;
+    }
+    .box{
+      background:rgba(15,23,42,.6);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+    }
+    .box h2{
+      margin:0 0 8px;
+      font-size:18px;
+    }
+    .box span{
+      color:var(--muted);
+      display:block;
+      line-height:1.5;
+    }
+    .btn{
+      display:inline-block;
+      margin-top:22px;
+      padding:12px 18px;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--accent),#4f46e5);
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+    }
+    .status{
+      margin-top:14px;
+      font-size:14px;
+      color:var(--accent2);
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="top">
+        <img class="logo" src="icons/icon-192.png" alt="VVF domande 3 livello">
+        <div>
+          <h1>VVF domande 3 livello</h1>
+          <p>Applicazione web semplice per organizzare e consultare le domande del 3 livello VVF.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="box">
+          <h2>Obiettivo</h2>
+          <span>Mettere online una PWA leggera, installabile e facile da usare.</span>
+        </div>
+        <div class="box">
+          <h2>Stile</h2>
+          <span>Interfaccia minimale, leggibile e adatta anche da smartphone.</span>
+        </div>
+        <div class="box">
+          <h2>Offline</h2>
+          <span>Questa versione non include cache offline o service worker.</span>
+        </div>
+      </div>
+
+      <a class="btn" href="manifest.json">Apri manifest</a>
+      <div class="status">Pronta per essere caricata su GitHub Pages.</div>
+    </section>
+  </main>
+</body>
+</html>
