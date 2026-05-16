@@ -3,136 +3,243 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#7c3aed">
-  <meta name="description" content="VVF domande 3 livello">
-  <title>VVF domande 3 livello</title>
-
+  <meta name="theme-color" content="#b91c1c">
+  <meta name="description" content="VVF 3 livello">
+  <title>VVF 3 Livello</title>
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icons/icon-192.png">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
-
   <style>
     :root{
-      --bg:#0f172a;
-      --card:#111827;
-      --text:#e5e7eb;
-      --muted:#94a3b8;
-      --accent:#7c3aed;
-      --accent2:#22c55e;
-      --border:#243041;
+      --bg:#0b0b0d;
+      --card:#17171b;
+      --card2:#1f1f24;
+      --text:#f4f4f5;
+      --muted:#a8a8af;
+      --red:#cf2222;
+      --red2:#e02d2d;
+      --line:#2e2e36;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:linear-gradient(180deg,#0f172a 0%,#111827 100%);
+      background:var(--bg);
       color:var(--text);
+    }
+    .app{
       min-height:100vh;
-    }
-    .wrap{
-      max-width:900px;
+      max-width:430px;
       margin:0 auto;
-      padding:24px;
-    }
-    .hero{
-      background:rgba(17,24,39,.92);
-      border:1px solid var(--border);
-      border-radius:20px;
-      padding:28px;
-      box-shadow:0 10px 30px rgba(0,0,0,.25);
+      background:linear-gradient(180deg,#b71c1c 0 92px,#0b0b0d 92px);
     }
     .top{
+      padding:14px 16px 0;
+    }
+    .head{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+    }
+    .brand{
       display:flex;
       align-items:center;
-      gap:16px;
-      margin-bottom:20px;
-      flex-wrap:wrap;
+      gap:10px;
+      min-width:0;
     }
     .logo{
-      width:64px;
-      height:64px;
-      border-radius:16px;
+      width:24px;
+      height:24px;
+      border-radius:6px;
       object-fit:cover;
-      border:1px solid var(--border);
       background:#fff;
+      flex:0 0 auto;
     }
-    h1{
-      margin:0;
-      font-size:clamp(24px,4vw,40px);
-      line-height:1.1;
-    }
-    p{
-      margin:12px 0 0;
-      color:var(--muted);
-      line-height:1.6;
-      font-size:16px;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:16px;
-      margin-top:24px;
-    }
-    .box{
-      background:rgba(15,23,42,.6);
-      border:1px solid var(--border);
-      border-radius:16px;
-      padding:18px;
-    }
-    .box h2{
-      margin:0 0 8px;
+    .title{
       font-size:18px;
+      font-weight:700;
+      white-space:nowrap;
     }
-    .box span{
-      color:var(--muted);
-      display:block;
-      line-height:1.5;
-    }
-    .btn{
-      display:inline-block;
-      margin-top:22px;
-      padding:12px 18px;
+    .badge{
+      background:rgba(255,255,255,.16);
+      color:#fff;
       border-radius:999px;
-      background:linear-gradient(90deg,var(--accent),#4f46e5);
-      color:white;
-      text-decoration:none;
+      padding:4px 10px;
+      font-size:12px;
       font-weight:600;
+      white-space:nowrap;
     }
-    .status{
+    .tabs{
+      display:flex;
+      gap:18px;
       margin-top:14px;
       font-size:14px;
-      color:var(--accent2);
+      font-weight:600;
+      color:#ffeaea;
+    }
+    .tab{
+      padding:10px 0 12px;
+      border-bottom:3px solid transparent;
+      opacity:.88;
+    }
+    .tab.active{
+      opacity:1;
+      border-bottom-color:#fff;
+    }
+    .content{
+      padding:18px 16px 28px;
+    }
+    .hero{
+      text-align:center;
+      padding:18px 8px 10px;
+    }
+    .emoji{
+      font-size:52px;
+      line-height:1;
+      margin-bottom:8px;
+    }
+    h1{
+      margin:0 0 8px;
+      font-size:26px;
+      color:#e23a3a;
+    }
+    .sub{
+      margin:0 auto;
+      max-width:320px;
+      color:var(--muted);
+      line-height:1.5;
+      font-size:15px;
+    }
+    .stats{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:22px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:16px 12px;
+      text-align:center;
+      box-shadow:0 8px 24px rgba(0,0,0,.22);
+      min-height:86px;
+    }
+    .num{
+      font-size:30px;
+      font-weight:800;
+      line-height:1;
+      color:#ff4d4d;
+    }
+    .label{
+      margin-top:7px;
+      font-size:12px;
+      letter-spacing:.06em;
+      font-weight:700;
+      color:#a8a8af;
+    }
+    .btn{
+      width:100%;
+      display:block;
+      border:none;
+      border-radius:14px;
+      margin-top:14px;
+      padding:14px 16px;
+      font-size:16px;
+      font-weight:700;
+      color:#fff;
+      background:linear-gradient(180deg,var(--red2),var(--red));
+    }
+    .btn.secondary{
+      background:#2a2a2f;
+      border:1px solid #3a3a42;
+      color:#ebebeb;
+    }
+    .panel{
+      margin-top:16px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:16px;
+    }
+    .panel h2{
+      margin:0 0 10px;
+      font-size:15px;
+      color:#ff4b4b;
+    }
+    .panel ul{
+      margin:0;
+      padding-left:18px;
+      color:#d5d5da;
+      line-height:1.65;
+      font-size:14px;
+    }
+    .panel li{margin:4px 0}
+    @media (max-width:380px){
+      .title{font-size:17px}
+      .num{font-size:28px}
+      .stats{gap:10px}
+      .card{padding:14px 10px}
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="hero">
-      <div class="top">
-        <img class="logo" src="icons/icon-192.png" alt="VVF domande 3 livello">
-        <div>
-          <h1>VVF domande 3 livello</h1>
-          <p>Applicazione web semplice per organizzare e consultare le domande del 3 livello VVF.</p>
+  <main class="app">
+    <header class="top">
+      <div class="head">
+        <div class="brand">
+          <img class="logo" src="icons/icon-192.png" alt="VVF">
+          <div class="title">VVF 3 Livello</div>
         </div>
+        <div class="badge">345 domande</div>
       </div>
 
-      <div class="grid">
-        <div class="box">
-          <h2>Obiettivo</h2>
-          <span>Mettere online una PWA leggera, installabile e facile da usare.</span>
-        </div>
-        <div class="box">
-          <h2>Stile</h2>
-          <span>Interfaccia minimale, leggibile e adatta anche da smartphone.</span>
-        </div>
-        <div class="box">
-          <h2>Offline</h2>
-          <span>Questa versione non include cache offline o service worker.</span>
-        </div>
+      <nav class="tabs" aria-label="Navigazione">
+        <div class="tab active">🏠 Home</div>
+        <div class="tab">📝 Esame</div>
+        <div class="tab">📚 Studio</div>
+      </nav>
+    </header>
+
+    <section class="content">
+      <div class="hero">
+        <div class="emoji">🔥</div>
+        <h1>Addetto Antincendio</h1>
+        <p class="sub">Preparati per l'esame di idoneità tecnica di Livello 3.</p>
       </div>
 
-      <a class="btn" href="manifest.json">Apri manifest</a>
-      <div class="status">Pronta per essere caricata su GitHub Pages.</div>
+      <section class="stats">
+        <div class="card">
+          <div class="num">345</div>
+          <div class="label">DOMANDE TOTALI</div>
+        </div>
+        <div class="card">
+          <div class="num">15</div>
+          <div class="label">PER ESAME</div>
+        </div>
+        <div class="card">
+          <div class="num">30'</div>
+          <div class="label">DURATA ESAME</div>
+        </div>
+        <div class="card">
+          <div class="num">12/15</div>
+          <div class="label">MIGLIOR PUNTEGGIO</div>
+        </div>
+      </section>
+
+      <button class="btn">🎯 Inizia Esame Simulato</button>
+      <button class="btn secondary">📚 Modalità Studio</button>
+
+      <section class="panel">
+        <h2>REGOLE ESAME</h2>
+        <ul>
+          <li>15 domande casuali estratte dal pool di 345</li>
+          <li>30 minuti di tempo</li>
+          <li>Soglia di idoneità: 10/15 risposte corrette</li>
+          <li>Nessuna penalità per risposta errata</li>
+        </ul>
+      </section>
     </section>
   </main>
 </body>
