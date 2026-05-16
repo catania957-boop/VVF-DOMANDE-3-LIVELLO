@@ -10,178 +10,24 @@
   <link rel="icon" href="icons/icon-192.png">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <style>
-    :root{
-      --bg:#0b0b0d;
-      --card:#17171b;
-      --card2:#1f1f24;
-      --text:#f4f4f5;
-      --muted:#a8a8af;
-      --red:#cf2222;
-      --red2:#e02d2d;
-      --line:#2e2e36;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:var(--bg);
-      color:var(--text);
-    }
-    .app{
-      min-height:100vh;
-      max-width:430px;
-      margin:0 auto;
-      background:linear-gradient(180deg,#b71c1c 0 92px,#0b0b0d 92px);
-    }
-    .top{
-      padding:14px 16px 0;
-    }
-    .head{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:12px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      min-width:0;
-    }
-    .logo{
-      width:24px;
-      height:24px;
-      border-radius:6px;
-      object-fit:cover;
-      background:#fff;
-      flex:0 0 auto;
-    }
-    .title{
-      font-size:18px;
-      font-weight:700;
-      white-space:nowrap;
-    }
-    .badge{
-      background:rgba(255,255,255,.16);
-      color:#fff;
-      border-radius:999px;
-      padding:4px 10px;
-      font-size:12px;
-      font-weight:600;
-      white-space:nowrap;
-    }
-    .tabs{
-      display:flex;
-      gap:18px;
-      margin-top:14px;
-      font-size:14px;
-      font-weight:600;
-      color:#ffeaea;
-    }
-    .tab{
-      padding:10px 0 12px;
-      border-bottom:3px solid transparent;
-      opacity:.88;
-    }
-    .tab.active{
-      opacity:1;
-      border-bottom-color:#fff;
-    }
-    .content{
-      padding:18px 16px 28px;
-    }
-    .hero{
-      text-align:center;
-      padding:18px 8px 10px;
-    }
-    .emoji{
-      font-size:52px;
-      line-height:1;
-      margin-bottom:8px;
-    }
-    h1{
-      margin:0 0 8px;
-      font-size:26px;
-      color:#e23a3a;
-    }
-    .sub{
-      margin:0 auto;
-      max-width:320px;
-      color:var(--muted);
-      line-height:1.5;
-      font-size:15px;
-    }
-    .stats{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
-      margin-top:22px;
-    }
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:16px 12px;
-      text-align:center;
-      box-shadow:0 8px 24px rgba(0,0,0,.22);
-      min-height:86px;
-    }
-    .num{
-      font-size:30px;
-      font-weight:800;
-      line-height:1;
-      color:#ff4d4d;
-    }
-    .label{
-      margin-top:7px;
-      font-size:12px;
-      letter-spacing:.06em;
-      font-weight:700;
-      color:#a8a8af;
-    }
-    .btn{
-      width:100%;
-      display:block;
-      border:none;
-      border-radius:14px;
-      margin-top:14px;
-      padding:14px 16px;
-      font-size:16px;
-      font-weight:700;
-      color:#fff;
-      background:linear-gradient(180deg,var(--red2),var(--red));
-    }
-    .btn.secondary{
-      background:#2a2a2f;
-      border:1px solid #3a3a42;
-      color:#ebebeb;
-    }
-    .panel{
-      margin-top:16px;
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:16px;
-    }
-    .panel h2{
-      margin:0 0 10px;
-      font-size:15px;
-      color:#ff4b4b;
-    }
-    .panel ul{
-      margin:0;
-      padding-left:18px;
-      color:#d5d5da;
-      line-height:1.65;
-      font-size:14px;
-    }
-    .panel li{margin:4px 0}
-    @media (max-width:380px){
-      .title{font-size:17px}
-      .num{font-size:28px}
-      .stats{gap:10px}
-      .card{padding:14px 10px}
-    }
+    :root{--bg:#0b0b0d;--card:#17171b;--line:#2e2e36;--text:#f4f4f5;--muted:#a8a8af;--red:#cf2222;--red2:#e02d2d;}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .app{min-height:100vh;max-width:430px;margin:0 auto;background:linear-gradient(180deg,#b71c1c 0 92px,#0b0b0d 92px)}
+    .top{padding:14px 16px 0} .head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px;min-width:0} .logo{width:24px;height:24px;border-radius:6px;object-fit:cover;background:#fff;flex:0 0 auto} .title{font-size:18px;font-weight:700;white-space:nowrap}
+    .badge{background:rgba(255,255,255,.16);color:#fff;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:600;white-space:nowrap}
+    .tabs{display:flex;gap:18px;margin-top:14px;font-size:14px;font-weight:600;color:#ffeaea} .tab{padding:10px 0 12px;border-bottom:3px solid transparent;opacity:.88;cursor:pointer;user-select:none}
+    .tab.active{opacity:1;border-bottom-color:#fff}
+    .content{padding:18px 16px 28px} .hero{text-align:center;padding:18px 8px 10px}
+    .emoji{font-size:52px;line-height:1;margin-bottom:8px} h1{margin:0 0 8px;font-size:26px;color:#e23a3a} .sub{margin:0 auto;max-width:320px;color:var(--muted);line-height:1.5;font-size:15px}
+    .stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px} .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 12px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.22);min-height:86px}
+    .num{font-size:30px;font-weight:800;line-height:1;color:#ff4d4d} .label{margin-top:7px;font-size:12px;letter-spacing:.06em;font-weight:700;color:#a8a8af}
+    .btn{width:100%;display:block;border:none;border-radius:14px;margin-top:14px;padding:14px 16px;font-size:16px;font-weight:700;color:#fff;background:linear-gradient(180deg,var(--red2),var(--red));cursor:pointer;touch-action:manipulation}
+    .btn.secondary{background:#2a2a2f;border:1px solid #3a3a42;color:#ebebeb}
+    .panel{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px} .panel h2{margin:0 0 10px;font-size:15px;color:#ff4b4b}
+    .panel ul{margin:0;padding-left:18px;color:#d5d5da;line-height:1.65;font-size:14px} .panel li{margin:4px 0}
+    .view{display:none} .view.active{display:block}
+    @media (max-width:380px){.title{font-size:17px}.num{font-size:28px}.stats{gap:10px}.card{padding:14px 10px}}
   </style>
 </head>
 <body>
@@ -194,53 +40,76 @@
         </div>
         <div class="badge">345 domande</div>
       </div>
-
       <nav class="tabs" aria-label="Navigazione">
-        <div class="tab active">🏠 Home</div>
-        <div class="tab">📝 Esame</div>
-        <div class="tab">📚 Studio</div>
+        <div class="tab active" data-view="home">🏠 Home</div>
+        <div class="tab" data-view="esame">📝 Esame</div>
+        <div class="tab" data-view="studio">📚 Studio</div>
       </nav>
     </header>
 
     <section class="content">
-      <div class="hero">
-        <div class="emoji">🔥</div>
-        <h1>Addetto Antincendio</h1>
-        <p class="sub">Preparati per l'esame di idoneità tecnica di Livello 3.</p>
+      <div class="view active" id="homeView">
+        <div class="hero">
+          <div class="emoji">🔥</div>
+          <h1>Addetto Antincendio</h1>
+          <p class="sub">Preparati per l'esame di idoneità tecnica di Livello 3.</p>
+        </div>
+
+        <section class="stats">
+          <div class="card"><div class="num">345</div><div class="label">DOMANDE TOTALI</div></div>
+          <div class="card"><div class="num">15</div><div class="label">PER ESAME</div></div>
+          <div class="card"><div class="num">30'</div><div class="label">DURATA ESAME</div></div>
+          <div class="card"><div class="num">12/15</div><div class="label">MIGLIOR PUNTEGGIO</div></div>
+        </section>
+
+        <button class="btn" id="startExam">🎯 Inizia Esame Simulato</button>
+        <button class="btn secondary" id="studyMode">📚 Modalità Studio</button>
+
+        <section class="panel">
+          <h2>REGOLE ESAME</h2>
+          <ul>
+            <li>15 domande casuali estratte dal pool di 345</li>
+            <li>30 minuti di tempo</li>
+            <li>Soglia di idoneità: 10/15 risposte corrette</li>
+            <li>Nessuna penalità per risposta errata</li>
+          </ul>
+        </section>
       </div>
 
-      <section class="stats">
-        <div class="card">
-          <div class="num">345</div>
-          <div class="label">DOMANDE TOTALI</div>
+      <div class="view" id="esameView">
+        <div class="hero">
+          <div class="emoji">📝</div>
+          <h1>Modalità Esame</h1>
+          <p class="sub">Qui puoi avviare la simulazione dell'esame.</p>
         </div>
-        <div class="card">
-          <div class="num">15</div>
-          <div class="label">PER ESAME</div>
-        </div>
-        <div class="card">
-          <div class="num">30'</div>
-          <div class="label">DURATA ESAME</div>
-        </div>
-        <div class="card">
-          <div class="num">12/15</div>
-          <div class="label">MIGLIOR PUNTEGGIO</div>
-        </div>
-      </section>
+        <button class="btn" id="backHome1">⬅ Torna alla Home</button>
+      </div>
 
-      <button class="btn">🎯 Inizia Esame Simulato</button>
-      <button class="btn secondary">📚 Modalità Studio</button>
-
-      <section class="panel">
-        <h2>REGOLE ESAME</h2>
-        <ul>
-          <li>15 domande casuali estratte dal pool di 345</li>
-          <li>30 minuti di tempo</li>
-          <li>Soglia di idoneità: 10/15 risposte corrette</li>
-          <li>Nessuna penalità per risposta errata</li>
-        </ul>
-      </section>
+      <div class="view" id="studioView">
+        <div class="hero">
+          <div class="emoji">📚</div>
+          <h1>Modalità Studio</h1>
+          <p class="sub">Qui puoi consultare e ripassare le domande.</p>
+        </div>
+        <button class="btn" id="backHome2">⬅ Torna alla Home</button>
+      </div>
     </section>
   </main>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const views = {home:document.getElementById('homeView'), esame:document.getElementById('esameView'), studio:document.getElementById('studioView')};
+    function show(v){
+      Object.values(views).forEach(x=>x.classList.remove('active'));
+      tabs.forEach(t=>t.classList.remove('active'));
+      views[v].classList.add('active');
+      document.querySelector(`.tab[data-view="${v}"]`).classList.add('active');
+    }
+    tabs.forEach(t=>t.addEventListener('click',()=>show(t.dataset.view)));
+    document.getElementById('startExam').addEventListener('click',()=>show('esame'));
+    document.getElementById('studyMode').addEventListener('click',()=>show('studio'));
+    document.getElementById('backHome1').addEventListener('click',()=>show('home'));
+    document.getElementById('backHome2').addEventListener('click',()=>show('home'));
+  </script>
 </body>
 </html>
